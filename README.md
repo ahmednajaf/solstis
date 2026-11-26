@@ -26,6 +26,8 @@ The watch calculates locally from a cached location and prayer method synced by 
 | --- | --- |
 | ![Next-prayer screen](media/watch.png) | ![Circular and rectangular complications on Modular Compact](media/complications.png) |
 
+![Solstis corner complication on the Infograph simulator face](media/corner.png)
+
 ## Engineering decisions
 
 - **Established calculations:** twelve selectable methods through pinned Adhan Swift, with Hanafi Asr, high-latitude rules and explicit adjustments.
@@ -37,15 +39,15 @@ The watch calculates locally from a cached location and prayer method synced by 
 
 ## Validation and release status
 
-**Pre-release, not yet available on the App Store.** Verification includes 18 core tests, native Duo simulator flows, watch sync/navigation on 40mm and 42mm simulators, circular and rectangular complications in the real WidgetKit host, and a distribution export with 45 resource checks and signatures across four products.
+**Pre-release, not yet available on the App Store.** Verification includes 18 core tests, native Duo simulator flows, watch sync/navigation on 40mm and 42mm simulators, circular, rectangular and corner complications in real watch-face hosts, small/medium/large Home Screen widget host tests, a watch main-flow accessibility audit, and a build 2 distribution export with 45 resource checks and signatures across four products.
 
-Physical-device compass and locked-reminder testing, additional widget/complication hosts, accessibility checks, recording permissions and final store preparation remain open. The watch displays a Qibla bearing rather than a live compass. Full adhan playback is foreground-only; notifications use short excerpts.
+Physical-device compass and locked-reminder testing, inline/Lock Screen host checks, iPhone accessibility audit findings, watch Always On/VoiceOver, recording permissions and final store preparation remain open. The watch displays a Qibla bearing rather than a live compass. Full adhan playback is foreground-only; notifications use short excerpts.
 
 The intended business model is a one-time purchase. Application source is maintained privately because this is a commercial product; this repository documents the design and engineering work.
 
 ## Capture provenance
 
-All images are actual simulator captures, not generated concept renders. Phone captures use the Duo simulator; watch captures use the 40mm SE 3 and 42mm Series 12 simulators. The complication image is Apple’s Modular Compact face hosting Solstis circular and rectangular complications. Simulator evidence does not establish physical-device behaviour.
+All images are actual simulator captures, not generated concept renders. Phone captures use the Duo simulator; watch captures use the 40mm SE 3 and 42mm Series 12 simulators. The complication images are Apple’s Modular Compact face hosting Solstis circular and rectangular complications, and Infograph hosting its curved corner complication. Simulator evidence does not establish physical-device behaviour.
 
 ## Credits and usage
 
