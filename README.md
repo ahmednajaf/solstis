@@ -1,8 +1,8 @@
 # Solstis
 
-**A native prayer companion designed for iPhone Duo and Apple Watch.**
+**A native prayer companion for iPhone Duo, Apple Watch and Android.**
 
-SwiftUI · WidgetKit · Watch Connectivity · Core Location · Swift 6
+SwiftUI · WidgetKit · Watch Connectivity · Core Location · Jetpack Compose
 
 Solstis explores how a daily utility can make purposeful use of a folding phone: a timetable on one display controls the prayer shown on the other, a partial fold becomes a tabletop clock, and the cover keeps the next prayer within easy reach.
 
@@ -14,9 +14,9 @@ The interface combines cobalt, cream and gold with Bricolage Grotesque. Its wove
 
 ## Spatial Qibla
 
-A projected plane and raised gold arrow give the Qibla screen depth. The arrow uses calculated bearing and live heading when available. Touch changes the viewpoint; unavailable sensors produce an explicit true-north bearing fallback. A flat mode and reduced-motion presentation keep the information accessible.
+Everyday Qibla uses a flat compass with a calculated true-north bearing and live heading when available. Ordinary iPhones and the closed Duo keep this compact presentation. An optional open-Duo experiment projects one raised arrow across both hinge planes, with opt-in ARKit viewpoint tracking. Physical camera/display alignment and head-tracked behaviour still need hardware validation; no calibrated hologram claim is made.
 
-![Spatial Qibla on the Duo simulator](media/qibla.png)
+![Current compact iPhone Qibla](media/qibla-iphone.png)
 
 ## A companion for the wrist
 
@@ -39,11 +39,11 @@ The watch calculates locally from a cached location and prayer method synced by 
 
 ## Validation and release status
 
-**Pre-release, not yet available on the App Store.** Verification includes 18 core tests, native Duo simulator flows, watch sync/navigation on 40mm and 42mm simulators, circular, rectangular and corner complications in real watch-face hosts, small/medium/large Home Screen widget host tests, a watch main-flow accessibility audit, and a build 2 distribution export with 45 resource checks and signatures across four products.
+**Pre-release, not yet available on the App Store.** Verification includes 23 core/projection tests, native Duo simulator flows, watch sync/navigation on 40mm and 42mm simulators, circular, rectangular and corner complications in real watch-face hosts, small/medium/large Home Screen widget host tests, a watch main-flow accessibility audit, and a build 2 distribution export with 45 resource checks and signatures across four products.
 
 Physical-device compass and locked-reminder testing, inline/Lock Screen host checks, iPhone accessibility audit findings, watch Always On/VoiceOver, recording permissions and final store preparation remain open. The watch displays a Qibla bearing rather than a live compass. Full adhan playback is foreground-only; notifications use short excerpts.
 
-The intended business model is a one-time purchase. Application source is maintained privately because this is a commercial product; this repository documents the design and engineering work.
+Solstis is being prepared as a free app with no advertising, subscriptions or in-app purchases. Application source is maintained privately; this repository documents the design and engineering work. Native iOS and Android development is ongoing; this is not a store-release announcement.
 
 ## Capture provenance
 
@@ -54,3 +54,11 @@ All images are actual simulator captures, not generated concept renders. Phone c
 Adhan Swift by Batoul Apps supplies prayer calculations under the MIT licence. Bricolage Grotesque is distributed under the SIL Open Font Licence. Apple’s simulator interface and watch face appear in the captures.
 
 Screenshots, Solstis branding and project materials are presented for portfolio review. No licence to redistribute the app or its recordings is granted.
+
+## Native Android development
+
+A Kotlin and Jetpack Compose Material 3 version now builds and passes ten prayer-calculation tests plus actual emulator flows in light and dark appearances. These captures show the current development app; it has not launched on Google Play. The Android version calculates locally with Adhan Kotlin and carries the Weave identity through native controls. Recording selection, reminders, widget hosting and wider device testing remain release work.
+
+| Today | Qibla |
+| --- | --- |
+| ![Android Today](screenshots/android/android-today-light.png) | ![Android Qibla](screenshots/android/android-qibla-light.png) |
