@@ -12,9 +12,9 @@ Solstis explores how a daily utility can make purposeful use of a folding phone:
 
 The interface combines cobalt, cream and gold with Bricolage Grotesque. Its woven graphic is drawn from calculated prayer events and the duration of the local day, including daylight-saving changes. The design carries through to small watch screens and glanceable widgets.
 
-## Spatial Qibla
+## Qibla
 
-Everyday Qibla uses a flat compass with a calculated true-north bearing and live heading when available. Ordinary iPhones and the closed Duo keep this compact presentation. An optional open-Duo experiment projects one raised arrow across both hinge planes, with opt-in ARKit viewpoint tracking. Physical camera/display alignment and head-tracked behaviour still need hardware validation; no calibrated hologram claim is made.
+Everyday Qibla uses a flat compass with a calculated true-north bearing and live heading when available. All displays now use this flat compass. A folded 3D experiment was removed after physical-device feedback; Solstis no longer uses the camera or face tracking.
 
 ![Current compact iPhone Qibla](media/qibla-iphone.png)
 
@@ -39,7 +39,7 @@ The watch calculates locally from a cached location and prayer method synced by 
 
 ## Validation and release status
 
-**Pre-release, not yet available on the App Store.** Verification includes 23 core/projection tests, native Duo simulator flows, watch sync/navigation on 40mm and 42mm simulators, circular, rectangular and corner complications in real watch-face hosts, small/medium/large Home Screen widget host tests, a watch main-flow accessibility audit, and a build 2 distribution export with 45 resource checks and signatures across four products.
+**Pre-release, not yet available on the App Store.** Verification includes 18 calculation and Qibla core tests, native Duo simulator flows, watch sync/navigation on 40mm and 42mm simulators, circular, rectangular and corner complications in real watch-face hosts, small/medium/large Home Screen widget host tests, a watch main-flow accessibility audit, and a build 2 distribution export with 45 resource checks and signatures across four products.
 
 Physical-device compass and locked-reminder testing, inline/Lock Screen host checks, iPhone accessibility audit findings, watch Always On/VoiceOver, recording permissions and final store preparation remain open. The watch displays a Qibla bearing rather than a live compass. Full adhan playback is foreground-only; notifications use short excerpts.
 
